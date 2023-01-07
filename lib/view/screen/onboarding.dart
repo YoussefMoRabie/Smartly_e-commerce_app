@@ -93,23 +93,26 @@ class OnBoarding extends StatelessWidget {
 }
 
 
- Widget buildBoardingItem(OnBoardingModel model,context) =>Column(
-   mainAxisAlignment: MainAxisAlignment.end,
-   children: [
-     Padding(
-       padding: const EdgeInsets.all(30.0),
-       child: Image(image: AssetImage(model.image!)),
-     ),
-
-     Text(
-       model.title!,
-       style: Theme.of(context).textTheme.headline1?.copyWith(color: Colors.black),
-     ),
-     Padding(
-       padding: const EdgeInsets.all(20.0),
-       child: Text(model.body!,
-         style: Theme.of(context).textTheme.bodyText1?.copyWith(color: Colors.black),
+ Widget buildBoardingItem(OnBoardingModel model,context) =>SafeArea(
+   child: 
+   Column(
+     mainAxisAlignment: MainAxisAlignment.end,
+     children: [
+       Padding(
+         padding: const EdgeInsets.all(30.0),
+         child: Image(image: AssetImage(model.image!)),
        ),
-     )
-   ],
+
+       Text(
+         model.title!,
+         style: Theme.of(context).textTheme.headline1?.copyWith(color: Colors.black),
+       ),
+       Padding(
+         padding: const EdgeInsets.symmetric(horizontal: 8.0),
+         child: Text(model.body!,
+           style: Theme.of(context).textTheme.bodyText1?.copyWith(color: Colors.black),
+         ),
+       )
+     ],
+   ),
  );

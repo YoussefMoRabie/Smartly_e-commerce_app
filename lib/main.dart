@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
       locale: controller.language,
       initialBinding: InitialBindings(),
       debugShowCheckedModeBanner: false,
-      title: 'HardWhere',
+      title: 'Smartly',
       theme: ThemeService().lightTheme,
 
       darkTheme: ThemeService().darkTheme,
